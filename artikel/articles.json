@@ -1,0 +1,9 @@
+{
+  "id": "meinserver",
+  "title": "MeinServer",
+  "description": "Cooler SMP Server",
+  "category": "Server",
+  "icon": "artikel/icons/meinserver.png",
+  "file": "artikel/meinserver.md",
+  "tags": ["smp", "survival"]
+}
