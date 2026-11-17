@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MineWikipedia</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<header id="main-header">
+  <h1>⛏️ Mine<span>Wikipedia</span></h1>
+  <p>Die Minecraft Wikipedia für Server & Infos</p>
+  <input id="search" type="text" placeholder="🔍 Suche nach Server, z.B. HugoSMP...">
+  <div id="filter">
+    <button data-cat="alle" class="active">Alle</button>
+    <button data-cat="Server">Server</button>
+    <button data-cat="Mod">Mod</button>
+    <button data-cat="Info">Info</button>
+  </div>
+  <a href="admin.html" style="color:#44ff66;font-size:13px">+ Neuer Artikel</a>
+</header>
+
+<main id="grid"></main>
+
+<div id="article-view" class="hidden">
+  <button id="back">← Zurück</button>
+  <img id="article-icon" src="">
+  <div id="article-content"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
