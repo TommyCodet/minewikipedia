@@ -1,9 +1,8 @@
-{
-  "id": "minewikipedia",
-  "title": "MineWikipedia",
-  "description": "Minecraft Wikipedia",
-  "category": "Info",
-  "icon": "artikel/icons/minewikipedia.png",
-  "file": "artikel/minewikipedia.md",
-  "tags": ["infos"]
-}
+[
+{"id":"hoehen","title":"Höhen Guide","description":"Alle Erze: Beste Y-Höhe auf einen Blick. Für 1.21+","category":"Info","icon":"/icons/diamond-ore.png","file":"artikel/hoehen.md","tags":["hoehen"]},
+{"id":"diamant","title":"Diamant","description":"Beste Höhe Y -59. Werkzeuge, Rüstung, Verzaubern.","category":"Erze","icon":"/icons/diamond-ore.png","file":"artikel/diamant.md","tags":["diamant"]},
+{"id":"eisen","title":"Eisen","description":"Start-Erz. Beste Höhe Y 56. Für alles am Anfang.","category":"Erze","icon":"/icons/iron-ore.png","file":"artikel/eisen.md","tags":["eisen"]},
+{"id":"netherite","title":"Netherite","description":"Stärkstes Material. Ancient Debris auf Y 15 im Nether.","category":"Erze","icon":"/icons/ancient-debris.png","file":"artikel/netherite.md","tags":["netherite"]},
+{"id":"traenke","title":"Tränke Guide","description":"Alle Tränke: Rezept, Dauer, Zutaten. Braustand erklärt.","category":"Tränke","icon":"/icons/brewing-stand.png","file":"artikel/traenke.md","tags":["traenke"]},
+{"id":"trank-staerke","title":"Trank der Stärke","description":"Mehr Schaden für Bosskämpfe. Rezept + Dauer.","category":"Tränke","icon":"/icons/potion-strength.png","file":"artikel/trank-staerke.md","tags":["trank"]}
+]

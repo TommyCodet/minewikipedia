@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><title>Admin - MineWiki</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><div class="article"><h1>Neuer Artikel</h1>
+<input id="password" type="password" placeholder="Admin-Passwort" style="width:100%;padding:12px;margin:8px 0;border:1px solid #dbe3f0;border-radius:8px">
+<input id="title" placeholder="Titel z.B. Diamant" style="width:100%;padding:12px;margin:8px 0;border:1px solid #dbe3f0;border-radius:8px">
+<select id="category" style="width:100%;padding:12px;margin:8px 0"><option>Erze</option><option>Tränke</option><option>Server</option><option>Info</option></select>
+<input id="description" placeholder="Kurzbeschreibung" style="width:100%;padding:12px;margin:8px 0;border:1px solid #dbe3f0;border-radius:8px">
+<input id="tags" placeholder="Tags, Komma getrennt" style="width:100%;padding:12px;margin:8px 0;border:1px solid #dbe3f0;border-radius:8px">
+<textarea id="content" rows="12" placeholder="Inhalt in Markdown..." style="width:100%;padding:12px;border:1px solid #dbe3f0;border-radius:8px"></textarea>
+<input type="file" id="icon"><br><br><button onclick="save()" style="background:#1e5eff;color:#fff;border:0;padding:12px 20px;border-radius:8px;font-weight:700;cursor:pointer">Veröffentlichen</button> <a href="/">Zurück</a>
+<p id="msg"></p></div></div>
+<script>async function save(){const fd=new FormData();fd.append('password',document.getElementById('password').value);fd.append('title',document.getElementById('title').value);fd.append('category',document.getElementById('category').value);fd.append('description',document.getElementById('description').value);fd.append('tags',document.getElementById('tags').value);fd.append('content',document.getElementById('content').value);const f=document.getElementById('icon').files[0];if(f)fd.append('icon',f);const r=await fetch('/api/artikel',{method:'POST',body:fd});const j=await r.json();document.getElementById('msg').innerText=r.ok?'Gespeichert!':'Fehler: '+(j.error||'');if(r.ok)location.href='/';}</script></body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MineWiki - Minecraft Wikipedia</title><link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script></head>
+<body>
+<header class="topbar"><div class="top-inner"><div class="logo">MINE<span>WIKI</span></div><a href="/admin">Admin</a></div></header>
+<div class="wrap">
+<div id="home">
+<section class="hero"><h1>Minecraft Wissen.<br><span>Sauber. Aktuell. Ohne Müll.</span></h1>
+<p>MineWiki ist die deutsche Minecraft-Wikipedia für Server, Erze und Tränke. Jeder Artikel ist geprüft, kurz gehalten und direkt auf den Punkt - für Spieler, nicht für Google.</p>
+<div class="hero-stats"><div><b id="count">0</b><span>Artikel</span></div><div><b>1.21+</b><span>Version</span></div><div><b>100%</b><span>Geprüft</span></div></div></section>
+
+<section class="info-grid">
+<div class="info-card"><h3>Was ist MineWiki?</h3><p>Ein Wiki von Spielern für Spieler. Keine 10 Seiten Werbung, kein Clickbait. Nur Infos, die du im Spiel wirklich brauchst.</p></div>
+<div class="info-card"><h3>Wie funktioniert es?</h3><p>Artikel oben suchen oder Kategorie wählen. Jeder Artikel hat eigene URL, z.B. /hoehen oder /diamant - zum Teilen.</p></div>
+<div class="info-card"><h3>Mitmachen?</h3><p>Nur Admins können schreiben. So bleibt die Qualität sauber. Vorschläge einfach per Discord an uns.</p></div>
+</section>
+
+<div class="search"><input id="search" placeholder="Artikel suchen... z.B. Diamant, Höhe, Stärke"></div>
+<nav class="cats"><button data-cat="alle" class="active">Alle Artikel</button><button data-cat="Erze">Erze</button><button data-cat="Tränke">Tränke</button><button data-cat="Info">Guides</button></nav>
+<div id="grid" class="grid"></div>
+<div class="footer">MineWiki • Kein offizielles Minecraft Produkt • Nicht verbunden mit Mojang</div>
+</div>
+
+<div id="article-view" class="hidden"><button class="back" id="back">← Zurück zur Startseite</button><div class="article"><div id="article-content"></div></div></div>
+</div><script src="app.js"></script></body></html>
