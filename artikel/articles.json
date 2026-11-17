@@ -1,9 +1,9 @@
 {
-  "id": "meinserver",
-  "title": "MeinServer",
-  "description": "Cooler SMP Server",
-  "category": "Server",
-  "icon": "artikel/icons/meinserver.png",
-  "file": "artikel/meinserver.md",
-  "tags": ["smp", "survival"]
+  "id": "minewikipedia",
+  "title": "MineWikipedia",
+  "description": "Minecraft Wikipedia",
+  "category": "Info",
+  "icon": "artikel/icons/minewikipedia.png",
+  "file": "artikel/minewikipedia.md",
+  "tags": ["infos"]
 }
