@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><title>Neuer Artikel</title><link rel="stylesheet" href="style.css"></head>
+<body style="max-width:700px;margin:40px auto;padding:20px">
+<h1>Neuer Artikel erstellen</h1>
+<form id="form">
+  <input name="title" placeholder="Titel z.B. HugoSMP" required style="width:100%;padding:12px;margin:10px 0"><br>
+  <input name="description" placeholder="Kurzbeschreibung" required style="width:100%;padding:12px;margin:10px 0"><br>
+  <select name="category" style="width:100%;padding:12px;margin:10px 0">
+    <option>Server</option><option>Mod</option><option>Info</option>
+  </select><br>
+  <input name="tags" placeholder="Tags mit Komma, z.B. smp, survival" style="width:100%;padding:12px;margin:10px 0"><br>
+  <label>Profilbild / Icon:</label><br>
+  <input type="file" name="icon" accept="image/*" style="margin:10px 0"><br>
+  <textarea name="content" placeholder="Hier den Artikel in Markdown schreiben...&#10;&#10;**IP:** play.hugosmp.de&#10;**Version:** 1.21+" rows="15" style="width:100%;padding:12px;margin:10px 0"></textarea><br>
+  <button type="submit" style="background:#44ff66;padding:15px 30px;border:none;border-radius:20px;font-weight:bold;cursor:pointer;width:100%">Artikel veröffentlichen</button>
+</form>
+<p id="msg"></p>
+<script>
+document.getElementById('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const res = await fetch('/api/artikel', { method: 'POST', body: formData });
+  const data = await res.json();
+  if(data.success) document.getElementById('msg').innerText = '✅ Artikel erstellt! Gehe zur Startseite.';
+  else document.getElementById('msg').innerText = '❌ Fehler';
+});
+</script>
+</body>
+</html>
